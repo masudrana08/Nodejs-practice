@@ -74,3 +74,80 @@ const EventEmitter = require('events')
 // stream.write('oops')
 
 
+
+
+
+// -------------->  Inspect
+
+// const obj = {name:'masud', roll: 1, description: 'I am mern stack developer, I am mern stack developerI am mern stack developerI am mern stack developerI am mern stack developerI am mern stack developerI am mern stack developer'}
+
+// console.log(util.inspect(obj, { compact: true, depth: 1 , breakLength: 2 }));
+
+
+// const obj = { a: 1 };
+// const obj2 = { b: 2 };
+// const weakSet = new WeakSet([obj, obj2]);
+
+// console.log(weakSet)
+// console.log(util.inspect(weakSet, { showHidden: true }));
+
+// -------------------------------- Show 10 depth
+// const obj = {
+//     a: {
+//         x: 'fdls', 
+//         y: "jfldf",
+//         z: {
+//             a:'df',
+//             b:{
+//                 x:'dfd',
+//                 z: {
+//                     a: '',
+//                     y:{
+//                         a: [1,2]
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// console.log(obj);
+// console.log(util.inspect(obj, {showHidden:true, depth:10}));
+
+// -------------------------------- Sort
+// util.inspect.styles = {string:'yellow'}
+// const o2 = {
+//     c: new Set([2, 1, 3]),
+//     a: '`a` comes before `b`',
+//     b: [2, 3, 1]
+//   };
+// console.log(util.inspect(true, {sorted:true}));
+
+
+// -------------------------------- Util Promisify & Util Color set
+// const stat = util.promisify(fs.stat);
+// util.inspect.styles = {number:'green', string:'yellow', boolean:'red'}
+// stat('.').then((stats) => {
+//   // Do something with `stats`
+//   console.log(stats);
+// }).catch((error) => {
+//   // Handle the error.
+// });
+
+// --------------------------- Remove Ansi escape code
+// const a = '\u001B[4mvalue\u001B[0m'
+// console.log(util.stripVTControlCharacters(a));
+
+// --------------------------- Decoder & Encoder
+const decoder = new TextDecoder();
+// const u8arr = new Uint8Array([72, 101, 108, 108, 111]);
+// console.log(u8arr);
+// console.log(decoder.decode(u8arr)); //
+
+// const encoder = new TextEncoder();
+// const src = 'Hello';
+// console.log(encoder.encode(src));
+
+
+
+// THERE ARE LOT OF TYPE CHECKING FEATURE
+// util.types.isAnyArrayBuffer
