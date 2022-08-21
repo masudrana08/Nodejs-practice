@@ -44,3 +44,17 @@
 // process.nextTick(()=>{console.log('nexttick')})
 
 
+
+try{
+  console.log('layer 1');
+  try{
+    const my = {}
+    my()
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+catch(err){
+  console.log('err layer 1');
+}
